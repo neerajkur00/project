@@ -1,0 +1,94 @@
+<%- include('partials/nav')%>
+  <!---->
+  <%- include('partials/header')%>
+    <!---->
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <style>
+      #red{
+        position: absolute;
+        transform: translate(-50% ,-50%);
+        top: 32%;
+        left: 32%;
+        font-size: 4vw;
+        background:#222;
+        /* padding: .5vw 2vw; */
+        font-weight: bolder;
+        border-radius: 20px;
+        color: white;
+        z-index: 9;
+        background: blur(20px);
+
+      }
+      #red::before{
+        position: absolute;
+        content: '';
+        width: 700px;
+        height: 100px;
+        background-color: tomato;
+        border-radius: 15px;
+        z-index: -1;
+        transition: 0.3s;
+        animation: animate 2s linear infinite;
+      }
+      #red:hover::before{
+        width: 700px;
+        height: 100px;
+
+      }
+      @keyframes animate {
+        50%{
+          filter: hue-rotate(350deg);
+        }
+      }
+     
+      span{
+        color:red;
+        background-color:#222;
+        padding: .5vw 1vw;
+        border-radius: 30px;
+        box-shadow: 2px 2px 2px 2px red;
+      }
+      span:hover{
+
+        background-color: rgb(246, 250, 251);
+      }
+      #anchor{
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        font-weight: bold;
+        font-size: 3vw;
+        padding: 1vw 2vw;
+        border-radius: 20px;
+        /* background-color: red; */
+        color: white;
+      }
+    
+    </style>
+
+    <body>
+      <div class="w-full h-screen">
+        <div id="red">
+          <h1 class="px-5 py-2" >Story Shop Trend😎</h1>
+
+        </div>
+        <div id="anchor">
+          <a href="/register">if you want to learn a lesson <br> of life and explore then 😁 <br><br> <span>Register Yourself </span></a>
+        </div>
+        <img class="w-full h-full bg-cover"
+          src="https://images.pexels.com/photos/1749303/pexels-photo-1749303.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="">
+      </div>
+    </body>
+
+    </html>
+
+
+

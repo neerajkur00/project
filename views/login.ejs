@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-96 h-96 bg-white rounded-lg shadow dark:border md:mt-10 sm:max-w-md xl:p-10 dark:bg-gray-800 dark:border-gray-700 mx-8 text-center">
+        <h1 class="bg-red-600 w-32 font-bold rounded-lg h-12 m-auto text-center p-2">User Login</h1>
+
+        <div class="w-60 m-auto">
+            <form class="mt-3 space-y-4 md:space-y-6 " action="/login" method="post">
+                <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                
+                type="text" name="username" placeholder="Enter Your username">
+    
+                <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="password" name="password"  placeholder="password">
+                <br>
+    
+                <p class="text-sm font-bold text-red-500 dark:text-red-400 mt-3">
+                    forgot Password ! <a href="" class="font-medium text-blue-600 hover:underline dark:text-blue-700">Click</a>
+                </p>
+    
+    
+                <input class="text-white bg-orange-600 rounded-lg font-bold px-3 py-3 mt-3" type="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>  

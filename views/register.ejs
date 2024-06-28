@@ -1,0 +1,56 @@
+<%- include('partials/nav')%>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+
+
+        <div class="w-80 h-auto bg-blue-300 m-auto mt-5 rounded-lg">
+
+            <h1 class=" p-2 font-bold w-40 rounded-lg text-center h-12 m-auto bg-orange-500">User Register Form</h1>
+
+            <div class=" w-60 m-auto">
+
+
+                <form class="w-full max-w-sm pt-5 " action="/register" method="post" enctype="multipart/form-data">
+
+                    <input
+                        class="appearance-none block w-60 bg-gray-200 text-blue-300 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        type="text" name="name" placeholder="Enter Your name">
+                    <input
+                        class="appearance-none block w-60 bg-gray-200 text-blue-300 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        type="text" name="username" placeholder="Enter username">
+                    <input
+                        class="appearance-none block w-60 bg-gray-200 text-blue-300 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        type="email" name="email" placeholder="Enter Your E-mail">
+                    <input
+                        class="appearance-none block w-60 bg-gray-200 text-blue-300 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        type="password" name="password" placeholder="*********">
+    
+                    <input
+                        class="appearance-none block w-60 bg-gray-200 text-blue-300 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        type="file" name="image">
+
+                        <p class="text-sm font-medium text-gray-500 dark:text-gray-400">
+                            have alread Register ? <a href="/login" class="font-medium text-blue-600 hover:underline dark:text-blue-500">login Here</a>
+                        </p>
+    
+                    <input class=" bg-yellow-300 font-bold mb-3 p-2 rounded-lg ml-3" type="submit">
+    
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </body>
+
+    </html>

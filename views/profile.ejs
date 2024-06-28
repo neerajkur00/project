@@ -1,0 +1,53 @@
+<!-- <%- include('partials/nav')%> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <nav class="flex justify-between mt-5 bg-blue-300 text-center p-2">
+        <a class=" font-bold text-2xl bg-red-300 p-2 rounded-lg" href="/mainpage"> <i
+                class="ri-arrow-left-double-line"></i>Back</a>
+        <a class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+            href="/logout">Logout</a>
+    </nav>
+    <div>
+        
+
+            <div class="grid grid-flow-row-dense grid-cols-1 grid-rows-1">
+                <div
+                class="w-80 h-96 bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700 mt-12 ml-5 ">
+                <a href="#" class=" flex justify-center items-center mt-5 ">
+                    <img class="rounded-full w-28 h-28 " src="/images/<%=red.image%>" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> <span class="text-orange-400">Name:-</span><%=red.name%></h5>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> <span class="text-orange-400">User_name:-</span><%=red.username%></h5>
+                        <h5 class="mb-2 text-1xl  font-bold tracking-tight text-gray-900 dark:text-white"> <span class="text-orange-400 ">E-Mail:-</span><%=red.email%></h5>
+                    </a>
+
+                    <a href="/updateprofile"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Update Profile
+                    
+                    </a>
+                    <a href="/resetpassword"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                         Reset Password
+                    
+                    </a>
+                </div>
+            </div>
+            </div>
+    </div>
+</body>
+
+</html>
