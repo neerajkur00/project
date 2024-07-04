@@ -35,17 +35,17 @@ router.get('/profile',isLoggedIn, async function (req, res, next) {
   // res.send("hy")
 })
 
-router.get("/updateprofile", function (req, res, next) {
-  res.render("update")
+router.get("/updateprofile",isLoggedIn, function (req, res, next) {
+  res.render("update",{user:req.user})
 })
-router.post('/update_profile', upload, async (req, res, next) => {
+router.post('/update_profile/:id', upload, async (req, res, next) => {
 
-  const updateuser = await schema.findOneAndUpdate({},{
+  const updateuser = await schema.findOneAndUpdate({_id:req.params.id},{
 
-    // image:req.red.filenam,
-    name: req.red.name,
-    username: req.red.username,
-    email: req.red.email,
+    image:req.file.filename,
+    name: req.body.name,
+    username: req.body.username,
+    email: req.body.email,
   
 
 
@@ -97,16 +97,11 @@ router.get('/resetpassword', isLoggedIn, function(req, res, next){
 
 router.post('/resetpassword/:_id', isLoggedIn, async function(req, res, next){
 
-  try {
-    await req.user.changePassword(
-      req.body.oldPassword,
-      req.body.newPassword
-    )
-    req.save();
-    res.redirect(`/profile/${req.user._id}`);
-  } catch (error) {
-    res.send(error)
-  }
+const user = await schema.findOneAndUpdate({_id: req.params.id})
+user.setPassword(req.body.password, function(){
+  user.save()
+  res.redirect('/login')
+})
 
 })
 
